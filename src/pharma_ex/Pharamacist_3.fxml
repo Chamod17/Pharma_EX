@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharma_ex.Pharamacist_3Controller">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="600.0" prefWidth="210.0" style="-fx-background-color: #1EA4E3;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="220.0" fitWidth="220.0" layoutX="2.0" AnchorPane.bottomAnchor="380.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@Untitled-1-01.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="43.0" layoutY="355.0" mnemonicParsing="false" onAction="#available" prefHeight="54.0" prefWidth="143.0" style="-fx-background-radius: 100;" text="Available &#10;Drugs" textAlignment="CENTER">
+                     <font>
+                        <Font name="Roboto Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="43.0" layoutY="427.0" mnemonicParsing="false" onAction="#update" prefHeight="54.0" prefWidth="143.0" style="-fx-background-radius: 100;" text="Update &#10;Drugs" textAlignment="CENTER">
+                     <font>
+                        <Font name="Roboto Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="40.0" layoutY="280.0" mnemonicParsing="false" onAction="#unavailable" prefHeight="54.0" prefWidth="143.0" style="-fx-background-radius: 100;" text="Unavailable &#10;Drugs" textAlignment="CENTER">
+                     <font>
+                        <Font name="Roboto Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="42.0" layoutY="501.0" mnemonicParsing="false" onAction="#add" prefHeight="54.0" prefWidth="143.0" style="-fx-background-radius: 100;" text="Add Drugs" textAlignment="CENTER">
+                     <font>
+                        <Font name="Roboto Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label layoutX="240.0" layoutY="14.0" prefHeight="38.0" prefWidth="445.0" style="-fx-font-family: monospace;" text="Update Drug Details">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="backbut" layoutX="712.0" layoutY="123.0" mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="71.0" style="-fx-background-color: gray; -fx-background-radius: 100;" text="Back" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnupdatedrug" layoutX="620.0" layoutY="123.0" mnemonicParsing="false" onAction="#updateDrug" prefHeight="36.0" prefWidth="81.0" style="-fx-background-color: Green; -fx-background-radius: 100;" text="Update" textFill="#f8f8f8">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TableView fx:id="drugTableView" layoutX="240.0" layoutY="176.0" onMouseClicked="#getSelected" prefHeight="410.0" prefWidth="543.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="176.0">
+               <columns>
+                  <TableColumn fx:id="colID" prefWidth="96.0" text="DrugID" />
+                  <TableColumn fx:id="colName" prefWidth="93.0" text="DrugName" />
+                  <TableColumn fx:id="colBrand" prefWidth="121.0" text="Brand" />
+                  <TableColumn fx:id="colpharm_id" prefWidth="112.0" text="Pharmacy Name" />
+                  <TableColumn fx:id="colQuantity" prefWidth="120.0" text="Quantity" />
+               </columns></TableView>
+            <Label layoutX="245.0" layoutY="79.0" prefHeight="20.0" prefWidth="40.0" text="Name">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="drugName" layoutX="312.0" layoutY="72.0" prefHeight="34.0" prefWidth="94.0" />
+            <Label layoutX="434.0" layoutY="79.0" text="Brand">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="drugBrand" layoutX="494.0" layoutY="72.0" prefHeight="34.0" prefWidth="94.0" />
+            <Label layoutX="615.0" layoutY="79.0" text="Quantity">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="drugQuantity" layoutX="684.0" layoutY="72.0" prefHeight="34.0" prefWidth="94.0" />
+            <Button fx:id="btnDrugDelete" layoutX="526.0" layoutY="123.0" mnemonicParsing="false" onAction="#deleteDrug" prefHeight="36.0" prefWidth="81.0" style="-fx-background-color: blue; -fx-background-radius: 100;" text="Delete" textFill="#f8f8f8">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

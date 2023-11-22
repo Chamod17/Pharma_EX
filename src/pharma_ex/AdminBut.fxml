@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharma_ex.AdminButController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="600.0" prefWidth="210.0" style="-fx-background-color: #1EA4E3;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="200.0" fitWidth="201.0" layoutX="5.0" layoutY="7.0" AnchorPane.bottomAnchor="393.0" AnchorPane.topAnchor="7.0">
+                     <image>
+                        <Image url="@Untitled-1-01.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Button fx:id="but11" layoutX="654.0" layoutY="521.0" mnemonicParsing="false" onAction="#BackBut" prefHeight="38.0" prefWidth="87.0" style="-fx-background-radius: 50; -fx-background-color: gray; -fx-text-fill: white; -fx-font-family: roboto;" text="Back" AnchorPane.bottomAnchor="41.0" AnchorPane.rightAnchor="59.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="addbut" layoutX="365.0" layoutY="68.0" mnemonicParsing="false" onAction="#pharmacies" prefHeight="117.0" prefWidth="246.0" style="-fx-background-radius: 100;" text="Pharmacies" AnchorPane.leftAnchor="365.0" AnchorPane.rightAnchor="189.0">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="viewbut" layoutX="365.0" layoutY="212.0" mnemonicParsing="false" onAction="#pharmacists" prefHeight="117.0" prefWidth="246.0" style="-fx-background-radius: 100;" text="Pharmacists" AnchorPane.leftAnchor="365.0" AnchorPane.rightAnchor="189.0">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="update" layoutX="365.0" layoutY="357.0" mnemonicParsing="false" onAction="#sales_reps" onMouseClicked="#update" prefHeight="117.0" prefWidth="246.0" style="-fx-background-radius: 100;" text="Sales &#10;Representatives" textAlignment="CENTER" AnchorPane.leftAnchor="365.0" AnchorPane.rightAnchor="189.0">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

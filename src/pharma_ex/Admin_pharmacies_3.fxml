@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharma_ex.Admin_pharmacies_3Controller">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="600.0" prefWidth="210.0" style="-fx-background-color: #1EA4E3;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="200.0" fitWidth="201.0" layoutX="5.0" layoutY="7.0" AnchorPane.bottomAnchor="393.0" AnchorPane.topAnchor="7.0">
+                     <image>
+                        <Image url="@Untitled-1-01.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="addbut" layoutX="29.0" layoutY="270.0" mnemonicParsing="false" onAction="#add_pharmacies" prefHeight="60.0" prefWidth="153.0" style="-fx-background-radius: 100;" text="Add">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="viewbut" layoutX="29.0" layoutY="365.0" mnemonicParsing="false" onAction="#view_pharmacies" prefHeight="60.0" prefWidth="153.0" style="-fx-background-radius: 100;" text="View">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="update" layoutX="30.0" layoutY="463.0" mnemonicParsing="false" onAction="#delete_pharmacies" onMouseClicked="#update" prefHeight="60.0" prefWidth="153.0" style="-fx-background-radius: 100;" text="Modify" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label layoutX="223.0" layoutY="20.0" prefHeight="38.0" prefWidth="445.0" style="-fx-font-family: monospace;" text="Modify Pharmacy Details">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="231.0" layoutY="85.0" prefHeight="20.0" prefWidth="40.0" text="Name">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="pharName" layoutX="298.0" layoutY="78.0" prefHeight="34.0" prefWidth="94.0" />
+            <Label layoutX="420.0" layoutY="85.0" text="District">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="pharDistrict" layoutX="480.0" layoutY="78.0" prefHeight="34.0" prefWidth="94.0" />
+            <Label layoutX="601.0" layoutY="85.0" text="Address">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="pharAddress" layoutX="670.0" layoutY="78.0" prefHeight="34.0" prefWidth="94.0" AnchorPane.leftAnchor="670.0" AnchorPane.rightAnchor="36.0" />
+            <Button fx:id="BackBut" layoutX="693.0" layoutY="144.0" mnemonicParsing="false" onAction="#BackBut" prefHeight="35.0" prefWidth="71.0" style="-fx-background-color: gray; -fx-background-radius: 100;" text="Back" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnupdatedrug" layoutX="601.0" layoutY="144.0" mnemonicParsing="false" onAction="#updateDrug" prefHeight="36.0" prefWidth="81.0" style="-fx-background-color: Green; -fx-background-radius: 100;" text="Update" textFill="#f8f8f8">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnDrugDelete" layoutX="507.0" layoutY="144.0" mnemonicParsing="false" onAction="#deleteDrug" prefHeight="36.0" prefWidth="81.0" style="-fx-background-color: blue; -fx-background-radius: 100;" text="Delete" textFill="#f8f8f8">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TableView fx:id="viewPharTable" layoutX="235.0" layoutY="201.0" onMouseClicked="#getSelected" prefHeight="378.0" prefWidth="543.0" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="235.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="201.0">
+               <columns>
+                  <TableColumn fx:id="colID" prefWidth="31.0" text="ID" />
+                  <TableColumn fx:id="colName" prefWidth="138.0" text="Pharmacy Name" />
+                  <TableColumn fx:id="colDistrict" prefWidth="68.0" text="District" />
+                  <TableColumn fx:id="colAddress" prefWidth="210.0" text="Address" />
+                  <TableColumn fx:id="colContact" prefWidth="95.0" text="Contact" />
+               </columns>
+            </TableView>
+            <Label layoutX="231.0" layoutY="152.0" text="Conatct">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="pharContact" layoutX="300.0" layoutY="145.0" prefHeight="34.0" prefWidth="94.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

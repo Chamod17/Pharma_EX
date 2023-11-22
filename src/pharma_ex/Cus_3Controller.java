@@ -1,0 +1,145 @@
+package pharma_ex;
+
+import java.io.IOException;
+import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+import javax.swing.JOptionPane;
+
+public class Cus_3Controller {
+
+    @FXML
+    private ResourceBundle resources;
+
+    @FXML
+    private URL location;
+    
+    @FXML
+    private TextField drug_alt;
+
+    @FXML
+    private Button search_alt;
+    
+    @FXML
+    private TableColumn<Alternative, String >col_brand;
+
+    @FXML
+    private TableColumn<Alternative, String> col_name;
+
+    @FXML
+    private TableView<Alternative> table;
+    
+    String drug_nm ;
+    
+
+    public Connection getConnection(){
+        
+        Connection conn;
+        try{
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pharmacy_db","root","");
+            return conn;
+        }catch(SQLException e){
+            System.out.println("Error: " + e.getMessage());
+        }
+        return null;
+        
+    }
+   
+     public ObservableList<Alternative> getProductList(){
+        ObservableList<Alternative> productList = FXCollections.observableArrayList();
+        Connection conn = getConnection();
+        String query = "SELECT alternatives.Alt_name, alternatives.Alt_description FROM alternatives INNER JOIN drugs ON drugs.drug_id= alternatives.Drug_id WHERE drugs.drug_name='"+drug_nm+"';";
+        Statement st;
+        ResultSet rs;
+        try{
+            st = conn.createStatement();
+            rs = st.executeQuery(query);
+            
+            
+            while(rs.next()){
+                Alternative unavailable;
+                unavailable = new Alternative(rs.getString("Alt_name"), rs.getString("Alt_description"));
+                productList.add(unavailable);
+                
+                
+              
+            }
+        }catch(SQLException e){
+            System.out.println(e);
+        }
+        
+        return productList;
+        
+}
+   
+    public void showPrices(){
+        try{
+       ObservableList<Alternative> view = getProductList();
+        col_name.setCellValueFactory(new PropertyValueFactory<>("alt_name"));
+        col_brand.setCellValueFactory(new PropertyValueFactory<>("description"));
+        table.setItems(view);
+        
+        
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+            System.out.println("asa");
+
+        }
+    }
+    
+    public void search(){
+        drug_nm = drug_alt.getText();
+        showPrices();
+        
+       }
+    
+
+    @FXML
+    void back(ActionEvent event) throws IOException {
+        Parent table = FXMLLoader.load(getClass().getResource("Customer2.fxml"));
+        Scene tableview = new Scene(table);
+        
+        
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        
+        window.setScene(tableview);
+        window.show();
+    }
+
+    @FXML
+    void print(ActionEvent event) throws IOException {
+        Parent table = FXMLLoader.load(getClass().getResource("Cus_4.fxml"));
+        Scene tableview = new Scene(table);
+        
+        
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        
+        window.setScene(tableview);
+        window.show();
+    }
+
+    @FXML
+    void initialize() {
+
+    }
+
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharma_ex.Admin_SalesController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="600.0" prefWidth="210.0" style="-fx-background-color: #1EA4E3;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="200.0" fitWidth="201.0" layoutX="5.0" layoutY="7.0" AnchorPane.bottomAnchor="393.0" AnchorPane.topAnchor="7.0">
+                     <image>
+                        <Image url="@Untitled-1-01.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="addbut" layoutX="29.0" layoutY="270.0" mnemonicParsing="false" onAction="#add_reps" prefHeight="60.0" prefWidth="153.0" style="-fx-background-radius: 100;" text="Add">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="viewbut" layoutX="29.0" layoutY="365.0" mnemonicParsing="false" onAction="#view_reps" prefHeight="60.0" prefWidth="153.0" style="-fx-background-radius: 100;" text="View">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="update" layoutX="30.0" layoutY="463.0" mnemonicParsing="false" onAction="#delete_reps" onMouseClicked="#update" prefHeight="60.0" prefWidth="153.0" style="-fx-background-radius: 100;" text="Delete&#10;" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label layoutX="253.0" layoutY="51.0" prefHeight="51.0" prefWidth="349.0" style="-fx-font-family: monospace;" text="Add Sales Reps">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <TextField fx:id="email" layoutX="409.0" layoutY="282.0" prefHeight="34.0" prefWidth="267.0" AnchorPane.leftAnchor="409.0" AnchorPane.rightAnchor="124.0" />
+            <Label layoutX="320.0" layoutY="282.0" prefHeight="34.0" prefWidth="72.0" text="E-mail">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fname" layoutX="409.0" layoutY="166.0" prefHeight="34.0" prefWidth="267.0" AnchorPane.leftAnchor="409.0" AnchorPane.rightAnchor="124.0" />
+            <Label layoutX="320.0" layoutY="168.0" prefHeight="34.0" prefWidth="72.0" text="First Name">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="company" layoutX="409.0" layoutY="338.0" prefHeight="34.0" prefWidth="267.0" AnchorPane.leftAnchor="409.0" AnchorPane.rightAnchor="124.0" />
+            <Label layoutX="320.0" layoutY="340.0" prefHeight="34.0" prefWidth="72.0" text="Company ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="638.0" layoutY="518.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="86.0" style="-fx-background-color: gray; -fx-background-radius: 100;" text="Back" textFill="#f5f5f5" AnchorPane.bottomAnchor="42.0" AnchorPane.rightAnchor="76.0">
+               <font>
+                  <Font name="Roboto Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="535.0" layoutY="518.0" mnemonicParsing="false" onAction="#add" prefHeight="40.0" prefWidth="86.0" style="-fx-background-color: purple; -fx-background-radius: 100;" text="Add" textFill="WHITE" AnchorPane.bottomAnchor="42.0" AnchorPane.rightAnchor="179.0">
+               <font>
+                  <Font name="Roboto Bold" size="17.0" />
+               </font>
+            </Button>
+            <TextField fx:id="lname" layoutX="409.0" layoutY="226.0" prefHeight="34.0" prefWidth="267.0" AnchorPane.leftAnchor="409.0" AnchorPane.rightAnchor="124.0" />
+            <Label layoutX="320.0" layoutY="228.0" prefHeight="34.0" prefWidth="72.0" text="Last Name">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="u_name" layoutX="409.0" layoutY="388.0" prefHeight="34.0" prefWidth="267.0" AnchorPane.leftAnchor="409.0" AnchorPane.rightAnchor="124.0" />
+            <Label layoutX="320.0" layoutY="390.0" prefHeight="34.0" prefWidth="72.0" text="Username">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="320.0" layoutY="439.0" prefHeight="34.0" prefWidth="72.0" text="Password">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="password" layoutX="409.0" layoutY="439.0" prefHeight="34.0" prefWidth="267.0" AnchorPane.leftAnchor="409.0" AnchorPane.rightAnchor="124.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

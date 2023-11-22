@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharma_ex.Pharmacist_4Controller">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="600.0" prefWidth="220.0" style="-fx-background-color: #1EA4E3;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="220.0" fitWidth="220.0" layoutX="2.0" AnchorPane.bottomAnchor="380.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@Untitled-1-01.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="43.0" layoutY="352.0" mnemonicParsing="false" onAction="#available" prefHeight="54.0" prefWidth="143.0" style="-fx-background-radius: 100;" text="Available &#10;Drugs" textAlignment="CENTER">
+                     <font>
+                        <Font name="Roboto Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="43.0" layoutY="424.0" mnemonicParsing="false" onAction="#update" prefHeight="54.0" prefWidth="143.0" style="-fx-background-radius: 100;" text="Update &#10;Drugs" textAlignment="CENTER">
+                     <font>
+                        <Font name="Roboto Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="40.0" layoutY="280.0" mnemonicParsing="false" onAction="#unavailable" prefHeight="54.0" prefWidth="143.0" style="-fx-background-radius: 100;" text="Unavailable &#10;Drugs" textAlignment="CENTER">
+                     <font>
+                        <Font name="Roboto Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="42.0" layoutY="498.0" mnemonicParsing="false" onAction="#add" prefHeight="54.0" prefWidth="143.0" style="-fx-background-radius: 100;" text="Add Drugs" textAlignment="CENTER">
+                     <font>
+                        <Font name="Roboto Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label layoutX="284.0" layoutY="147.0" prefHeight="20.0" prefWidth="40.0" text="Name">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="284.0" layoutY="196.0" text="Brand">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="284.0" layoutY="248.0" text="Pharmacy">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="286.0" layoutY="298.0" text="Quantity">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="drugName" layoutX="374.0" layoutY="140.0" prefHeight="34.0" prefWidth="267.0" AnchorPane.leftAnchor="374.0" AnchorPane.rightAnchor="159.0" />
+            <TextField fx:id="drugBrand" layoutX="374.0" layoutY="189.0" prefHeight="34.0" prefWidth="267.0" AnchorPane.leftAnchor="374.0" AnchorPane.rightAnchor="159.0" />
+            <TextField fx:id="drugQuantity" layoutX="374.0" layoutY="291.0" prefHeight="34.0" prefWidth="267.0" AnchorPane.leftAnchor="374.0" AnchorPane.rightAnchor="159.0" />
+            <Label layoutX="240.0" layoutY="68.0" prefHeight="38.0" prefWidth="445.0" style="-fx-font-family: monospace;" text="Add New Drugs">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="backbut" layoutX="570.0" layoutY="356.0" mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="71.0" style="-fx-background-color: gray; -fx-background-radius: 100;" text="Back" textFill="#fcfcfc" AnchorPane.bottomAnchor="209.0" AnchorPane.rightAnchor="159.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnAddDrugs" layoutX="475.0" layoutY="356.0" mnemonicParsing="false" onAction="#adddrugs" prefHeight="36.0" prefWidth="81.0" style="-fx-background-color: #9B0E50; -fx-background-radius: 100;" text="Add" textFill="#f8f8f8" AnchorPane.bottomAnchor="208.0" AnchorPane.rightAnchor="244.0">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ChoiceBox fx:id="choicePharmacy" layoutX="374.0" layoutY="241.0" prefHeight="34.0" prefWidth="267.0" AnchorPane.leftAnchor="374.0" AnchorPane.rightAnchor="159.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

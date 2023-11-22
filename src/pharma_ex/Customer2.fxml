@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharma_ex.Customer2Controller">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="600.0" prefWidth="223.0" style="-fx-background-color: #1EA4E3;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="227.0" fitWidth="222.0" layoutX="3.0" AnchorPane.bottomAnchor="373.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@Untitled-1-01.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="252.0" layoutY="29.0" text="Drug Details">
+               <font>
+                  <Font name="Times New Roman Bold" size="30.0" />
+               </font>
+            </Label>
+            <TableView fx:id="table" layoutX="263.0" layoutY="84.0" prefHeight="368.0" prefWidth="485.0" AnchorPane.bottomAnchor="148.0" AnchorPane.leftAnchor="263.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="84.0">
+               <columns>
+                  <TableColumn fx:id="col_name" prefWidth="114.0" text="Name" />
+                  <TableColumn fx:id="col_brand" prefWidth="90.0" text="Brand" />
+                  <TableColumn fx:id="col_pharmacy" prefWidth="105.0" text="Pharmacy" />
+                  <TableColumn fx:id="col_district" prefWidth="100.0" text="District" />
+                  <TableColumn fx:id="col_quantity" prefWidth="75.0" text="Quantity" />
+               </columns>
+            </TableView>
+            <Button layoutX="263.0" layoutY="505.0" mnemonicParsing="false" onAction="#findalter" prefHeight="51.0" prefWidth="222.0" style="-fx-background-radius: 100; -fx-background-color: purple;" text="Find Alternatives" textFill="WHITE" AnchorPane.bottomAnchor="44.0">
+               <font>
+                  <Font name="Times New Roman Bold" size="21.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="498.0" layoutY="505.0" mnemonicParsing="false" onAction="#print" prefHeight="51.0" prefWidth="154.0" style="-fx-background-radius: 100; -fx-background-color: #14F53E;" text="Print Reciept" textFill="WHITE" AnchorPane.bottomAnchor="44.0">
+               <font>
+                  <Font name="Times New Roman Bold" size="21.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="660.0" layoutY="505.0" mnemonicParsing="false" onAction="#back_main" prefHeight="51.0" prefWidth="90.0" style="-fx-background-color: gray; -fx-background-radius: 100;" text="Back" textFill="WHITE" AnchorPane.bottomAnchor="44.0">
+               <font>
+                  <Font name="Times New Roman" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="drug_n" layoutX="479.0" layoutY="29.0" prefHeight="34.0" prefWidth="192.0" promptText="Search Drugs Here" AnchorPane.leftAnchor="479.0" AnchorPane.rightAnchor="129.0" />
+            <Button fx:id="search" layoutX="679.0" layoutY="34.0" mnemonicParsing="false" onAction="#search" text="Search" AnchorPane.rightAnchor="69.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

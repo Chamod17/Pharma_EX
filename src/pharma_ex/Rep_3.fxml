@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharma_ex.Rep_3Controller">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ECECEC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="604.0" prefWidth="232.0" style="-fx-background-color: #1EA4E3;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="229.0" fitWidth="232.0" layoutX="-5.0" layoutY="163.0" AnchorPane.bottomAnchor="212.0" AnchorPane.topAnchor="163.0">
+                     <image>
+                        <Image url="@Untitled-1-01.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="258.0" layoutY="31.0" prefHeight="51.0" prefWidth="339.0" text="Add next Date of Dispatch">
+               <font>
+                  <Font name="Times New Roman Bold" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="but1" layoutX="510.0" layoutY="402.0" mnemonicParsing="false" onAction="#adddrugs" prefHeight="50.0" prefWidth="100.0" style="-fx-background-radius: 50; -fx-background-color: blue; -fx-text-fill: white; -fx-font-family: roboto;" text="Add" AnchorPane.bottomAnchor="152.0" AnchorPane.rightAnchor="163.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="but" layoutX="630.0" layoutY="402.0" mnemonicParsing="false" onAction="#back" prefHeight="50.0" prefWidth="104.0" style="-fx-background-radius: 50; -fx-background-color: gray; -fx-text-fill: white; -fx-font-family: roboto;" text="Back" AnchorPane.bottomAnchor="152.0" AnchorPane.rightAnchor="39.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="268.0" layoutY="258.0" text="Pharmacy">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="268.0" layoutY="194.0" text="District">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="267.0" layoutY="307.0" prefHeight="50.0" prefWidth="87.0" text="Next date of &#10;Dispatch" textAlignment="CENTER">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" layoutX="373.0" layoutY="120.0" prefHeight="45.0" prefWidth="291.0" AnchorPane.leftAnchor="373.0" AnchorPane.rightAnchor="109.0" />
+            <Label layoutX="267.0" layoutY="133.0" text="Username">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+            </Label>
+            <ListView fx:id="listview" layoutX="364.0" layoutY="223.0" prefHeight="30.0" prefWidth="291.0" style="-fx-background-color: #ECECEC;" />
+            <Button layoutX="678.0" layoutY="181.0" mnemonicParsing="false" onAction="#Getpharmacy" prefHeight="45.0" prefWidth="75.0" text="Select" AnchorPane.rightAnchor="20.0" />
+            <ListView fx:id="listview2" layoutX="364.0" layoutY="336.0" prefHeight="30.0" prefWidth="291.0" style="-fx-background-color: #ECECEC;" />
+            <DatePicker fx:id="date_dis" layoutX="373.0" layoutY="309.0" prefHeight="45.0" prefWidth="291.0" AnchorPane.leftAnchor="373.0" AnchorPane.rightAnchor="109.0" />
+            <ChoiceBox fx:id="district" layoutX="373.0" layoutY="182.0" prefHeight="45.0" prefWidth="291.0" AnchorPane.leftAnchor="373.0" AnchorPane.rightAnchor="109.0" />
+            <ChoiceBox fx:id="pharmacy" layoutX="373.0" layoutY="246.0" prefHeight="45.0" prefWidth="291.0" AnchorPane.leftAnchor="373.0" AnchorPane.rightAnchor="109.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
